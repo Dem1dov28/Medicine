@@ -1,0 +1,158 @@
+[
+  {
+    "id": "creatine-strength",
+    "gold_publish": true,
+    "note": "faithful: subject + outcome + increase all supported",
+    "source_text": "Background: Creatine is among the most studied ergogenic aids. Methods: We conducted a systematic review and meta-analysis of randomized controlled trials of creatine monohydrate supplementation. Results: Creatine supplementation significantly increased muscle strength compared with placebo in healthy adults (mean improvement approximately 8%). Conclusion: Creatine increases muscle strength.",
+    "claim": {
+      "subject": "creatine", "population": "healthy adults",
+      "intervention": {"description": "creatine monohydrate", "dose": "5 g/day"},
+      "comparator": "placebo", "outcome": "muscle strength",
+      "effect": {"direction": "increase", "magnitude": "8%"},
+      "sources": [{"study_id": "s1", "pmid_or_doi": "10.0/creatine", "study_type": "meta_analysis", "year": 2021}]
+    }
+  },
+  {
+    "id": "vitd-mortality",
+    "gold_publish": true,
+    "note": "faithful decrease",
+    "source_text": "This systematic review pooled randomized trials of vitamin D supplementation in older adults. Across studies with a median 3-year follow-up, vitamin D supplementation reduced all-cause mortality relative to placebo. The authors conclude vitamin D lowers all-cause mortality in this population.",
+    "claim": {
+      "subject": "vitamin D", "population": "older adults",
+      "intervention": {"description": "daily supplementation"},
+      "comparator": "placebo", "outcome": "all-cause mortality",
+      "effect": {"direction": "decrease"},
+      "sources": [{"study_id": "s2", "pmid_or_doi": "10.0/vitd", "study_type": "systematic_review", "year": 2020}]
+    }
+  },
+  {
+    "id": "omega3-triglycerides",
+    "gold_publish": true,
+    "note": "faithful decrease",
+    "source_text": "In a randomized controlled trial of adults with hyperlipidemia, omega-3 fatty acid supplementation was compared with placebo over 12 weeks. Omega-3 fatty acids significantly lowered serum triglycerides. The reduction in triglycerides was dose-dependent.",
+    "claim": {
+      "subject": "omega-3", "population": "adults with hyperlipidemia",
+      "intervention": {"description": "fish oil"},
+      "comparator": "placebo", "outcome": "serum triglycerides",
+      "effect": {"direction": "decrease"},
+      "sources": [{"study_id": "s3", "pmid_or_doi": "10.0/omega", "study_type": "rct", "year": 2019}]
+    }
+  },
+  {
+    "id": "magnesium-sleep",
+    "gold_publish": true,
+    "note": "faithful increase (quality improved)",
+    "source_text": "A prospective cohort study followed middle-aged adults and assessed dietary magnesium intake and sleep. Higher magnesium intake was associated with improved sleep quality. Participants in the highest intake quartile reported better sleep quality than those in the lowest.",
+    "claim": {
+      "subject": "magnesium", "population": "middle-aged adults",
+      "intervention": {"description": "dietary magnesium"},
+      "comparator": "low intake", "outcome": "sleep quality",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s4", "pmid_or_doi": "10.0/mag", "study_type": "cohort", "year": 2018}]
+    }
+  },
+  {
+    "id": "zinc-cold",
+    "gold_publish": true,
+    "note": "faithful decrease",
+    "source_text": "This randomized, placebo-controlled trial evaluated zinc lozenges in adults with the common cold. Zinc reduced the duration of cold symptoms compared with placebo. The mean duration of the common cold was shorter in the zinc group.",
+    "claim": {
+      "subject": "zinc", "population": "adults",
+      "intervention": {"description": "lozenges"},
+      "comparator": "placebo", "outcome": "cold duration",
+      "effect": {"direction": "decrease"},
+      "sources": [{"study_id": "s5", "pmid_or_doi": "10.0/zinc", "study_type": "rct", "year": 2017}]
+    }
+  },
+  {
+    "id": "caffeine-endurance",
+    "gold_publish": true,
+    "note": "faithful increase",
+    "source_text": "In a randomized crossover study of trained cyclists, caffeine (3 mg/kg) was compared with placebo. Caffeine improved endurance performance, increasing time to exhaustion. Endurance performance was greater after caffeine ingestion.",
+    "claim": {
+      "subject": "caffeine", "population": "trained cyclists",
+      "intervention": {"description": "3 mg/kg"},
+      "comparator": "placebo", "outcome": "endurance performance",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s6", "pmid_or_doi": "10.0/caf", "study_type": "rct", "year": 2016}]
+    }
+  },
+  {
+    "id": "probiotics-ibs",
+    "gold_publish": true,
+    "note": "faithful decrease (fixed: improving symptoms = reducing severity)",
+    "source_text": "A systematic review of randomized trials evaluated probiotics in patients with irritable bowel syndrome (IBS). Probiotics reduced the severity of IBS symptoms compared with placebo. Overall symptom severity decreased with probiotic treatment.",
+    "claim": {
+      "subject": "probiotics", "population": "IBS patients",
+      "intervention": {"description": "multi-strain probiotic"},
+      "comparator": "placebo", "outcome": "IBS symptom severity",
+      "effect": {"direction": "decrease"},
+      "sources": [{"study_id": "s11", "pmid_or_doi": "10.0/prob", "study_type": "systematic_review", "year": 2022}]
+    }
+  },
+  {
+    "id": "subject-absent",
+    "gold_publish": false,
+    "note": "unfaithful: source is about iron, claim about creatine (core subject unsupported)",
+    "source_text": "A meta-analysis of randomized trials found that iron supplementation improved hemoglobin levels in anemic patients. Iron therapy increased hemoglobin compared with placebo.",
+    "claim": {
+      "subject": "creatine", "population": "anemic patients",
+      "intervention": {"description": "supplement"},
+      "comparator": "placebo", "outcome": "hemoglobin",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s7", "pmid_or_doi": "10.0/iron", "study_type": "meta_analysis", "year": 2021}]
+    }
+  },
+  {
+    "id": "direction-contradiction",
+    "gold_publish": false,
+    "note": "unfaithful: source says reduced oxidative stress, claim says increase",
+    "source_text": "In a randomized controlled trial, vitamin E supplementation reduced markers of oxidative stress but had no effect on cardiovascular events. Oxidative stress markers were lower in the vitamin E group.",
+    "claim": {
+      "subject": "vitamin E", "population": "adults",
+      "intervention": {"description": "supplement"},
+      "comparator": "placebo", "outcome": "oxidative stress",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s8", "pmid_or_doi": "10.0/vite", "study_type": "rct", "year": 2015}]
+    }
+  },
+  {
+    "id": "no-effect-source",
+    "gold_publish": false,
+    "note": "unfaithful: source found no effect, claim asserts increase",
+    "source_text": "A large randomized trial evaluated multivitamin use for cognitive health in older adults. Multivitamin use had no significant effect on cognitive decline compared with placebo. Cognitive outcomes did not differ between groups.",
+    "claim": {
+      "subject": "multivitamin", "population": "older adults",
+      "intervention": {"description": "daily multivitamin"},
+      "comparator": "placebo", "outcome": "cognition",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s9", "pmid_or_doi": "10.0/mv", "study_type": "rct", "year": 2014}]
+    }
+  },
+  {
+    "id": "empty-source",
+    "gold_publish": false,
+    "note": "unfaithful: source does not mention the subject or outcome at all",
+    "source_text": "The study protocol described participant recruitment procedures, randomization methods, and the planned statistical analysis. No outcomes or results were reported in this document.",
+    "claim": {
+      "subject": "selenium", "population": "adults",
+      "intervention": {"description": "supplement"},
+      "comparator": "placebo", "outcome": "thyroid function",
+      "effect": {"direction": "increase"},
+      "sources": [{"study_id": "s10", "pmid_or_doi": "10.0/sel", "study_type": "cohort", "year": 2013}]
+    }
+  },
+  {
+    "id": "curcumin-wrong-subject",
+    "gold_publish": false,
+    "note": "unfaithful: claim subject (curcumin) not in source (green tea)",
+    "source_text": "An observational cohort study reported that green tea catechin intake was associated with modest weight loss in overweight adults. Higher catechin consumption correlated with reduced body weight.",
+    "claim": {
+      "subject": "curcumin", "population": "overweight adults",
+      "intervention": {"description": "extract"},
+      "comparator": "placebo", "outcome": "body weight",
+      "effect": {"direction": "decrease"},
+      "sources": [{"study_id": "s12", "pmid_or_doi": "10.0/tea", "study_type": "cohort", "year": 2019}]
+    }
+  }
+]

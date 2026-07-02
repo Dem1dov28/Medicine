@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mki
+      POSTGRES_PASSWORD: mki
+      POSTGRES_DB: mki
+    ports:
+      - "5432:5432"
+    volumes:
+      - mki_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mki"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      MKI_DATABASE_URL: postgresql+psycopg://mki:mki@db:5432/mki
+      MKI_OPENROUTER_API_KEY: ${MKI_OPENROUTER_API_KEY:-}
+      MKI_VERIFIER_MODELS: ${MKI_VERIFIER_MODELS:-anthropic/claude-sonnet-4.5,google/gemini-2.5-pro,openai/gpt-4o}
+      MKI_VERIFY_THRESHOLD: ${MKI_VERIFY_THRESHOLD:-0.75}
+    ports:
+      - "8000:8000"
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./:/code
+
+volumes:
+  mki_pgdata:
